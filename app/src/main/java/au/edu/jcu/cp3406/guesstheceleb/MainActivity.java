@@ -1,12 +1,15 @@
 package au.edu.jcu.cp3406.guesstheceleb;
 
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.res.AssetManager;
-import android.os.Bundle;
-
 import java.io.IOException;
-import java.sql.SQLOutput;
+import java.io.InputStream;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
         try {
             String[] names = manager.list("celebs");
             System.out.println(Arrays.toString(names));
+
+            ImageView imageView = findViewById(R.id.image);
+
+            InputStream stream = manager.open("celebs/" + names[0]);
+            Bitmap bitmap = BitmapFactory.decodeStream(stream);
+
+            imageView.setImageBitmap(bitmap);
         } catch (IOException e) {
             System.out.println("failed to get names");
         }

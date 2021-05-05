@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">guessTheCeleb</string>
+    <string name="image">image</string>
 </resources>
