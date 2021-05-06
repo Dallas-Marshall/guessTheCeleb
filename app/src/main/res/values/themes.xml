@@ -14,7 +14,11 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="headline"  parent="TextAppearance.AppCompat.Display2">
+    <style name="headline" parent="TextAppearance.AppCompat.Display2">
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="large" parent="TextAppearance.AppCompat.Large">
         <item name="android:textColor">?attr/colorPrimary</item>
     </style>
 </resources>
