@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">guessTheCeleb</string>
     <string name="image">image</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="level">Level ?</string>
+    <string name="play">Play!</string>
+
+    <string-array name="levels">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+        <item>Expert</item>
+    </string-array>
 </resources>
